@@ -6,14 +6,19 @@
 :root{
   --background-color: #080808;
   --text-color: #f7f7f7;
-  --text-padding: 448px;
+  --text-padding: 390px;
+  /* text padding 448 px*/
   --grid-size: 930px;
+  --text-size: 65px;
+  filter: grayscale(1);
 }
 
 body {
   margin:0px;
   background-color: var(--background-color);
   z-index: 10;
+  height:100%;
+  width: 100%;
 }
 
 h1 {
@@ -43,6 +48,8 @@ header {
   font-size: 70px;
   font-weight: 600;
   font-family: 'Spartan', sans-serif;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .title {
@@ -57,11 +64,12 @@ header {
   grid-template-rows: var(--grid-size);
   font-family: 'Spartan', sans-serif;
   font-weight: 200;
-  font-size: 65px;
+  font-size: var(--text-size);
 }
 
 
 .nav-selection-DAC {
+  cursor: pointer;
   background: url('media/dac_background.jpg') no-repeat;
   background-size: cover;
   opacity: 1.0;
@@ -73,8 +81,13 @@ header {
   opacity: 0.7;
 }
 
+.nav-selection-DAC:active{
+  opacity: 0.3;
+}
+
 
 .nav-selection-ADC {
+  cursor: pointer;
   background: url('media/adc_background.jpg') center;
   background-size: cover;
   opacity: 1.0;
@@ -84,6 +97,10 @@ header {
 
 .nav-selection-ADC:hover{
   opacity: 0.7;
+}
+
+.nav-selection-ADC:active{
+  opacity: 0.3;
 }
 
 
@@ -101,11 +118,57 @@ header {
 }
 
 
+footer {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
 /* Responsive*/
+
+@media screen and (max-width: 1949px) {
+
+}
+
+
 
 @media screen and (max-height: 1000px) {
   :root {
-    --text-padding: 408px;
+    --text-padding: 340px;
     --grid-size: 850px;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  :root {
+    --text-padding: 280px;
+    --grid-size: 750px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  :root {
+    --text-padding: 250px;
+    --grid-size: 650px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  :root {
+    --text-padding: 210px;
+    --grid-size: 550px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  :root {
+    --text-padding: 160px;
+    --grid-size: 450px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  :root {
+    --text-padding: 130px;
+    --grid-size: 350px;
   }
 }
