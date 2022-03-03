@@ -1,13 +1,13 @@
-// Navigation between websites
+// Navigation between pages
 
 function nav_DAC () {
-    window.open("dac.html","_self");
+    document.getElementById('dac').scrollIntoView();
 }
 
 function nav_ADC () {
-    window.open("adc.html","_self");
+    document.getElementById('adc').scrollIntoView();
 }
 
 function nav_Home () {
-    window.open("index.html","_self");
+    document.getElementsByClassName('welcome').scrollIntoView();
 }
