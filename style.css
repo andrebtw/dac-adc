@@ -19,6 +19,7 @@ body {
   background-color: var(--background-color);
   z-index: 10;
   height:100%;
+  min-width: 770px;
   width: 100%;
 }
 
@@ -26,6 +27,7 @@ h1 {
   margin: 0;
   color: var(--text-color);
   text-align: center;
+  min-width: 770px;
 }
 
 p {
@@ -143,10 +145,13 @@ header {
 
 
 footer {
-  margin-top: 20px;
-  padding-bottom: 20px;
+  margin-top: 0px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #0B0B0B;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 200;
 }
-
 
 
 /* Responsive*/
