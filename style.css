@@ -35,7 +35,9 @@ p {
 }
 
 header {
+  min-width: 770px;
   margin: 0px;
+  width: 100%;
 }
 
 
@@ -121,6 +123,7 @@ header {
 }
 
 .sectiontitle{
+  min-width: 770px;
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 30px;
@@ -129,6 +132,7 @@ header {
 }
 
 .sectiontext{
+  min-width: 770px;
   margin-bottom: 30px;
   font-size: 20px;
   font-family: 'Spartan', sans-serif;
