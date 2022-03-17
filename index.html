@@ -15,6 +15,7 @@
         <h1 class="welcome">
             WELCOME !
         </h1>
+        <!--Language selection (English, French)-->
         <!--
         <div class="dropdown">
             <button class="dropbtn">Dropdown</button>
@@ -48,13 +49,13 @@
     <!--Website content-->
     <div id="dac">
         <p class="sectiontitle">
-            Digital to analogic Conversion : What is that ?
+            Digital to analogic Conversion : <b>What is that ?</b>
         </p>
 
         <p class="sectiontext">
             Digital to analogic conversion is a process in which most of the tech world uses today. <br/>
-            It is used in many things, like a speaker which is an analogic output. <br/>
-            The computer is playing a song stored in a .mp3 format or something else which is digital information. <br/>
+            It is used in many things, like <b>a speaker</b> which is an <b>analogic output. </b><br/>
+            The computer is playing a song stored in a <b>.mp3 format</b> or something else which is <b>digital information. </b><br/>
             Then this information needs to be converted to analogic in order to the speaker to play.
             <br/>
             <br/>
@@ -62,12 +63,18 @@
         </p>
 
         <p class="sectiontitle">
-            Digital to analogic Conversion : How does it work ?
+            Digital to analogic Conversion : <b>How does it work ?</b>
         </p>
 
         <p class="sectiontext">
-            First, we need to know what is the digital value that we want to convert to analogic. <br/>
-            Then, we need to know
+            First, we will choose what is the <b>digital</b> value that we want to convert to analogic. <br/>
+            For example, <b>D<sub>val</sub> = 48</b> <br>
+            Then, we need to know what will be the voltage range we can work on. <br/>
+            For example, from <b>0 V</b> to <b>5 V</b> so, <b>V<sub>ref</sub> = 5 V</b> <br/>
+            We need to know what will be the <b>DAC's resolution</b>, let's say it is <b>8 bit</b>. <br/>
+            With the resolution, <b>(R<sub>res</sub> = 8)</b> we can find the <b>Quantum</b> : <br/>
+            <b>Q = V<sub>ref</sub> / (2<sup>R<sub>res</sub></sup> - 1) </b><br/>
+            <b>Q = 5 / (2<sup>8</sup> - 1) = 0.0196 V = 19.6 mV</b> <br/>
         </p>
     </div>
 
@@ -77,7 +84,7 @@
 
     <!--Footer-->
     <footer>
-        <p>Made by andrebtw.</p>
+        <p>Made by <a href="https://github.com/andrebtw">andrebtw.</a></p>
     </footer>
 
     <script src="index.js"></script>
