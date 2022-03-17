@@ -144,6 +144,7 @@ header {
 }
 
 
+
 footer {
   margin-top: 0px;
   padding-bottom: 15px;
@@ -151,6 +152,20 @@ footer {
   background-color: #0B0B0B;
   font-family: 'Spartan', sans-serif;
   font-weight: 200;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+  transition: ease-out 150ms
+}
+
+a:hover {
+  color: #AAAAAA;
+}
+
+a:active {
+  color: #555555;
 }
 
 
