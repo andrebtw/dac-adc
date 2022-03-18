@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -83,9 +84,31 @@
             Now, it is time to convert our value to analogic which was 48. <br/>
             The <b>output voltage</b> of 48 would be in this case : <br/>
             <b>V<sub>out</sub> = Q x D<sub>val</sub></b> <br/>
-            <b>V<sub>out</sub> = 0.0196 x 48 = 0.9408 V</b>
-
+            <b>V<sub>out</sub> = 0.0196 x 48 = 0.9408 V</b> <br/>
+            That's it ! We just saw how to convert a digital value to analogic voltage. <br/>
         </p>
+
+        <p class="sectiontitle">
+            Digital to analogic Conversion : <b>Converter</b>
+        </p>
+        <div class="sectiontext">
+            <div class="inputs">
+                <input type="text" id="vmin"> <span>V<sub>min</sub></span>
+                <input type="text" id="vmax"> <span>V<sub>max</sub></span>
+                <input type="text" id="res"> <span>Resolution (Number of Bit)</span>
+                <input type="text" id="value"> <span>Value to convert</span> <br/>
+                <input type="submit" value="CONVERT" onclick="getDAC()">
+            </div>
+
+            <div class="outputs">
+                <p id="quantum">
+                    
+                </p>
+                <p id="vout">
+
+                </p>
+            </div>
+        </div>
     </div>
 
     <div id="adc">

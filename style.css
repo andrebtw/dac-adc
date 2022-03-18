@@ -36,6 +36,13 @@ p {
   text-align: center;
 }
 
+span {
+  color: var(--text-color);
+  font-family: 'Spartan', sans-serif;
+  font-weight: 200;
+  
+}
+
 header {
   min-width: 770px;
   margin: 0px;
