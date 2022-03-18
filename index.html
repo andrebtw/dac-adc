@@ -50,29 +50,30 @@
     <!--Website content-->
     <div id="dac">
         <p class="sectiontitle">
-            Digital to analogic Conversion : <b>What is that ?</b>
+            Digital to analog Conversion : <b>What is that ?</b>
         </p>
 
         <p class="sectiontext">
-            Digital to analogic conversion is a process in which most of the tech world uses today. <br/>
-            It is used in many things, like <b>a speaker</b> which is an <b>analogic output. </b><br/>
+            Digital to analog conversion is a process in which most of the tech world uses today. <br/>
+            It is used in many things, like <b>a speaker</b> which is an <b>analog output. </b><br/>
             The computer is playing a song stored in a <b>.mp3 format</b> or something else which is <b>digital information. </b><br/>
-            Then this information needs to be converted to analogic in order to the speaker to play.
+            Then this information needs to be converted to analog in order to the speaker to play.
             <br/>
             And this is what we are going to see today !
             <br/>
         </p>
 
         <p class="sectiontitle">
-            Digital to analogic Conversion : <b>How does it work ?</b>
+            Digital to analog Conversion : <b>How does it work ?</b>
         </p>
         <br/>
 
         <p class="sectiontext">
-            First, we will choose what is the <b>digital</b> value that we want to convert to analogic. <br/>
+            First, we will choose what is the <b>digital</b> value that we want to convert to analog. <br/>
             For example, <b>D<sub>val</sub> = 48</b> <br>
             Then, we need to know what will be the voltage range we can work on. <br/>
-            For example, from <b>0 V</b> to <b>5 V</b> so, <b>V<sub>ref</sub> = 5 V</b> <br/>
+            For example, from <b>0 V</b> to <b>5 V</b> so, </br>
+            <b>V<sub>min</sub> = 0 V ;</b> <b>V<sub>max</sub> = 5 V ; </b> <b>V<sub>ref</sub> = 5 - 0 = 5 V</b><br/>
             We need to know what will be the <b>DAC's resolution</b>, let's say it is <b>8 bit</b>. <br/>
             With the resolution, <b>(N<sub>res</sub> = 8)</b> we can find the <b>Quantum</b> : <br/>
             <b>Q = V<sub>ref</sub> / (2<sup>N<sub>res</sub></sup> - 1) </b><br/>
@@ -81,15 +82,15 @@
             The <b>Quantum</b> will be the most little variation between a value. <br/>
             Since our resolution is 8 bit, we can only choose a value between <b>0</b> and <b>255</b>. <br/>
             Why <b>255</b> ? Because <b>2<sup>8</sup> - 1 = 255 </b> as we saw earlier. <br/>
-            Now, it is time to convert our value to analogic which was 48. <br/>
+            Now, it is time to convert our value to analog which was 48. <br/>
             The <b>output voltage</b> of 48 would be in this case : <br/>
-            <b>V<sub>out</sub> = Q x D<sub>val</sub></b> <br/>
-            <b>V<sub>out</sub> = 0.0196 x 48 = 0.9408 V</b> <br/>
-            That's it ! We just saw how to convert a digital value to analogic voltage. <br/>
+            <b>V<sub>out</sub> = Q x D<sub>val</sub> + V<sub>min</sub></b> <br/>
+            <b>V<sub>out</sub> = 0.0196 x 48 + 0 = 0.9408 V</b> <br/>
+            That's it ! We just saw how to convert a digital value to analog voltage. <br/>
         </p>
 
         <p class="sectiontitle">
-            Digital to analogic Conversion : <b>Converter</b>
+            Digital to analog Conversion : <b>Converter</b>
         </p>
         <div class="sectiontext">
             <div class="inputs">
@@ -102,7 +103,7 @@
 
             <div class="outputs">
                 <p id="quantum">
-                    
+
                 </p>
                 <p id="vout">
 
