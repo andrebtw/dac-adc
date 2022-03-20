@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNA & CAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background color overlay-->
+    <div class="bg-overlay"></div>
+    
+    <!--Header-->
+    <header>
+        <h1 class="welcome">
+            BIENVENU(E) !
+        </h1>
+        <div class="language">
+            <div class="dropdown">
+              <button class="dropbtn">Language</button>
+              <div class="dropdown-content">
+                <a href="index.html">English</a>
+              </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Title-->
+    <div class="title">
+        <p>
+            Conversion Numérique-Analogique & Analogique-Numérique
+        </p>
+    </div>
+
+    <!--Navigation-->
+    <nav class="nav-selection">
+        <div class="nav-selection-DAC" onclick="nav_DAC()">
+            <p class="nav-selection-DAC-text">Conversion Numérique-Analogique</p>
+        </div>
+
+        <div class="nav-selection-ADC" onclick="nav_ADC()">
+            <p class="nav-selection-ADC-text">Conversion Analogique-Numérique</p>
+        </div>
+    </nav>
+
+
+    <!--Website content-->
+    <div id="dac">
+        <p class="sectiontitle">
+            Conversion Numérique-Analogique : <b>Qu'est-ce que c'est ?</b>
+        </p>
+
+        <p class="sectiontext">
+            La conversion numérique-analogique est utilisé dans beaucoup de domaines, <br/>
+            Comme <b>une enceinte</b> qui envoye une <b>information analogique. </b><br/>
+            L'ordinateur lit une musique en <b>format .mp3</b> ou un autre. Cela est de <b>l'information numérique.</b><br/>
+            Cette information a donc besoin d'etre converti en analogique pour que l'enceinte marche.
+            <br/>
+            Et ç'est ce que nous allons voir aujourd'hui !
+            <br/>
+        </p>
+
+        <p class="sectiontitle">
+            Conversion Numérique-Analogique : <b>Comment Ça Marche ?</b>
+        </p>
+        <br/>
+
+        <p class="sectiontext">
+            Tout d'abord, nous allons choisir la valeur <b>numérique</b> que nous voulons convertir en analogique.<br/>
+            Par exemple, <b>D<sub>val</sub> = 48</b> <br>
+            Ensuite, nous devons savoir sur quel difference de tension nous pouvons utiliser. <br/>
+            Par exemple, de <b>0 V</b> à <b>5 V</b> donc, </br>
+            <b>V<sub>min</sub> = 0 V ;</b> <b>V<sub>max</sub> = 5 V ; </b> <b>V<sub>ref</sub> = 5 - 0 = 5 V</b><br/>
+            Maintenant, nous devons savoir la <b>resolution du convertisseur</b>, Disons que c'est <b>8 bit</b>. <br/>
+            Avec la resolution, <b>(N<sub>res</sub> = 8)</b> nous pouvons trouver le <b>Quantum</b> : <br/>
+            <b>Q = V<sub>ref</sub> / (2<sup>N<sub>res</sub></sup> - 1) </b><br/>
+            <b>Q = 5 / (2<sup>8</sup> - 1) = 0.0196 V = 19.6 mV</b> <br/>
+            Mais... Qu'est-ce que le <b>Quantum</b> ? <br/>
+            Le <b>Quantum</b> va être la plus petite variation de tension entre une valeur. <br/>
+            Étant donné que notre résolution choisi est de 8 bit, nous pouvons uniquement choisir une valeur numérique entre<b>0</b> et <b>255</b>. <br/>
+            Pourquoi <b>255</b> ? Car <b>2<sup>8</sup> - 1 = 255 </b><br/>
+            Maintenant, il est temps de convertir notre valeur analogique qui etait 48. <br/>
+            Le <b>voltage de sortie</b> de 48 serait : <br/>
+            <b>V<sub>out</sub> = Q x D<sub>val</sub> + V<sub>min</sub></b> <br/>
+            <b>V<sub>out</sub> = 0.0196 x 48 + 0 = 0.9408 V</b> <br/>
+            C'est fini ! Nous venons de voir comment convertir une valeur numérique en une valeur analogique. <br/>
+        </p>
+
+        <p class="sectiontitle">
+            Conversion Numérique-Analogique : <b>Converstisseur</b>
+        </p>
+        <div class="sectiontext">
+            <div class="inputs">
+                <input type="text" id="vmin"> <span>V<sub>min</sub></span>
+                <input type="text" id="vmax"> <span>V<sub>max</sub></span>
+                <input type="text" id="res"> <span>Resolution (Nombre de bit)</span>
+                <input type="text" id="value"> <span>Valeur à convertir</span> <br/>
+                <input type="submit" value="CONVERTIR" onclick="getDAC()">
+            </div>
+
+            <div class="outputs">
+                <p id="quantum">
+
+                </p>
+                <p id="vout">
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="adc">
+
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <p>Fait par <a href="https://github.com/andrebtw">andrebtw.</a></p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -31,6 +31,4 @@ function getDAC() {
     var vout_text = document.getElementById('vout');
     quantum_text.innerHTML = '<b>Q = ' + Ve + ' / (2<sup>' + res + '</sup> - 1) = ' + quantum + ' V</b>';
     vout_text.innerHTML = '<b>V<sub>out</sub> = ' + quantum + ' x ' + value + ' + ' + vmin + ' = ' + Vout + ' V</b>'
-
 }
-
