@@ -198,6 +198,15 @@ header {
 
 }
 
+.inputs {
+  margin: auto;
+  width: 20%;
+}
+
+.input {
+  margin: auto;
+  width: 30%;
+}
 
 
 footer {
