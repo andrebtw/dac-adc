@@ -92,10 +92,22 @@
         </p>
         <div class="sectiontext">
             <div class="inputs">
-                <input type="text" id="vmin"> <span>V<sub>min</sub></span>
-                <input type="text" id="vmax"> <span>V<sub>max</sub></span>
-                <input type="text" id="res"> <span>Resolution (Number of Bit)</span>
-                <input type="text" id="value"> <span>Value to convert</span> <br/>
+                <span>V<sub>min</sub></span>
+                <br>
+                <input type="text" id="vmin" class="input">
+                <br>
+                <span>V<sub>max</sub></span>
+                <br>
+                <input type="text" id="vmax" class="input">
+                <br>
+                <span>Resolution (Number of Bit)</span>
+                <br>
+                <input type="text" id="res" class="input">
+                <br>
+                <span>Value to convert</span>
+                <br>
+                <input type="text" id="value" class="input">
+                <br>
                 <input type="submit" value="CONVERT" onclick="getDAC()">
             </div>
 
@@ -110,8 +122,12 @@
         </div>
     </div>
 
-    <div id="adc">
+    <div id="separation"></div>
 
+    <div id="adc">
+        <p class="sectiontitle">
+            <!--Analog to digital Conversion : <b>What is that ?</b>-->
+        </p>
     </div>
 
     <!--Footer-->
